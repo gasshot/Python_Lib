@@ -120,3 +120,19 @@ print(train['Sex'].value_counts())
 print(train['Pclass'].value_counts())
 
 print(train['Survived'].value_counts())
+# -
+
+train[train['Sex']  == 'female'].value_counts('Survived')
+
+# +
+# 성별이 남자에 해당하는 사망/생존 의 인원수를 구하고
+# male_survived 변수에 저장해보자!
+male_survived = train[train['Sex']  == 'male'].value_counts('Survived')
+
+male_survived
+
+# +
+### github체크
+# -
+
+
