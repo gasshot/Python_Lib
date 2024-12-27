@@ -156,12 +156,22 @@ hr_info
 
 
 
-# -
 
+# +
 #DESC(Describe)
-describe()
 
 
+
+# +
+# 급여의 총 합계
+
+# df명.loc[행,열]
+# df명.iloc[행,열]
+
+# 1) 급여의 데이터를 시리즈 형태로 추출
+hr_info.loc[:,'SALARY']
+# 2) 급여의 데이터를 데이터프레임 형태로 추출
+hr_info[['SALARY']]
 
 # +
 
