@@ -155,9 +155,9 @@ hr_info = pd.read_csv('./data/hr-info.csv',encoding = 'EUC-KR')
 hr_info
 
 
+# -
 
 
-# +
 #DESC(Describe)
 
 
@@ -174,8 +174,30 @@ hr_info.loc[:,'SALARY']
 hr_info[['SALARY']]
 
 # +
+# 급여의 총 합계
 
+hr_info.loc[: ,'SALARY'].sum()
 ### github체크
 # -
+# 급여의 평균 구하기 (전체 급여 합계 / 급여자의 수)
+hr_info.loc[: ,'SALARY'].sum() / hr_info['SALARY'].count()
 
 
+# +
+# RETIRE_DATE(퇴직날짜) > NaN이 아닌 사항은 퇴작한 사람
+
+# 퇴직한 직원의 수를 확인하기
+
+# 정답
+hr_info.loc[: ,'RETIRE_DATE'].count()
+hr_info[hr_info['RETIRE_DATE'].notnull()].count()
+# -
+
+# 남/여 비율을 확인하기
+hr_info.value_counts('GENDER')
+hr_info[['GENDER']]
+print(hr_info[hr_info['GENDER'] == 'M'].value_counts('GENDER'))
+print(hr_info[hr_info['GENDER'] == 'F'].value_counts('GENDER'))
+
+print(hr_info[hr_info.iloc[:, 2] == 'M'].value_counts('GENDER'))
+print(hr_info[hr_info.iloc[:, 2] == 'F'].value_counts('GENDER'))
