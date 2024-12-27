@@ -86,4 +86,37 @@ population[['2015']]
 population.fillna(value = 0)
 
 # +
-#testtest
+# 1. 라이브러리 불러오기 : train.csv
+train = pd.read_csv("./train.csv", index_col = 'PassengerId')
+
+# 2. train 이라는 변수에 저장
+train
+
+# +
+# 데이터 정보
+# PassengerId : 승객별 아이디
+# Survived : 생존여부 > 0: 사망 1: 생존
+# Pclass : 객싱 등급 1등급, 2등급, 3등급
+# Sibsp : 합성어 > 배우자와 형제 자매가 같이 탑승한 수
+# Parch : 합성어 > 같이 탑승 가족 수
+# Fare : 요금
+# Cabin : 객실 번호
+# Embarked : 생선지 > S, C, Q
+
+# +
+# head() : 상단의 5개의 데이터만 보여줌
+# tail(): 하단의 5개의 데이터만 보여줌
+
+train.head()
+train.count()
+
+train['Embarked'].value_counts()
+
+# +
+# 연습문제 1
+# 타이타닉호 승객 중 성별 인원수(Sex), 선실별 인원수(Pclass), 사망/생존의 인원수(survived)를 구하라.
+train['Sex'].value_counts()
+
+train['Pclass'].value_counts()
+
+train['Survived'].value_counts()
