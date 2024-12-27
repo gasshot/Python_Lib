@@ -115,8 +115,8 @@ train['Embarked'].value_counts()
 # +
 # 연습문제 1
 # 타이타닉호 승객 중 성별 인원수(Sex), 선실별 인원수(Pclass), 사망/생존의 인원수(survived)를 구하라.
-train['Sex'].value_counts()
+print(train['Sex'].value_counts())
 
-train['Pclass'].value_counts()
+print(train['Pclass'].value_counts())
 
-train['Survived'].value_counts()
+print(train['Survived'].value_counts())
