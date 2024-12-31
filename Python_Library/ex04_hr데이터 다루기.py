@@ -104,7 +104,7 @@ pd.DataFrame({'교육수준' : ['고등학교 졸업','박사 학위'], '평균'
 # +
 # group by() 활용
 
-
+print(type(hr.groupby(by = 'EDU_LEVEL')['SALARY']))
 hr.groupby(by = 'EDU_LEVEL')['SALARY'].mean()
 
 # +
