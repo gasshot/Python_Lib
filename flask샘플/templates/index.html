@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #title {
+                text-align: center;
+            }
+            #content {
+                width: 1500px;
+                height: 500px;
+                margin: 0 auto;
+            }
+            #content a {
+                text-decoration: none;
+                color: black;
+            }
+            .nav-item {
+                text-align: center;
+            }
+            #resultFrame {
+                width: 100%;
+                height: 700px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 id="title">프로젝트명: 인구밀도와 교통사고건수의 상관관계</h1>
+        <table border="1" id="content">
+            <tr>
+                <th class="nav-item">메뉴</th>
+                <td rowspan="9">
+                    <iframe id="resultFrame" frameborder="0" name="resultFrame"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='1')}}" target="resultFrame">1.분석목표 및 방법</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='2')}}" target="resultFrame">2.사용한 라이브러리 및 활용 데이터셋</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='3')}}" target="resultFrame">3.데이터 전처리 과정</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='4')}}" target="resultFrame">4.분석결과시각화</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='5')}}" target="resultFrame">5.분석에 대한 결론</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='6')}}" target="resultFrame">6.참고문헌</a></td>
+            </tr>
+            <tr>
+                <td class="nav-item"><a href="{{url_for('page', name='7')}}" target="resultFrame">7.팀원역할</a></td>
+            </tr>
+        </table>
+    </body>
+</html>
