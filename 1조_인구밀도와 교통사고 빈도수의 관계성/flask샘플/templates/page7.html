@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: rgba(255, 152, 200, 0.4);
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        header {
+            background-color: rgb(255, 110, 178, 0.3);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .names > td{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 각 팀원별로 세부적인 역할에 대해 작성 -->
+    <header>
+        <h2>7. 팀원역할</h2>
+    </header>
+    <hr>
+
+    <table border="1">
+        <span>🖥팀원</span>
+        <tr align="center" class="names">
+            <td>👑김현민👑</td>
+            <td>🦧강인오🦧</td>
+            <td>💀김현웅💀</td>
+            <td>🍾이효성🍾</td>
+        </tr>
+        <tr align="left">
+            <td width = 300>
+                <ul>
+                    <li>2023 인구밀도와 교통사고 빈도수 파이썬 시각화</li>
+                    <li>교통사고 빈도수 데이터 수집</li>
+                    <li>데이터 수집 출처 정리</li>
+                    <li>파이썬 변수명 통일</li>
+                    <li>2021,2022,2023 파이썬 파일 통합</li>
+                    <li>발표 내용 정리</li>
+                    <li>플라스크 CSS제작 및 파일 통합</li>
+                </ul>
+            </td>
+            <td width = 300>
+                <ul >
+                    <li>인구수 데이터 수집</li>
+                    <li>2021 인구밀도와 교통사고 빈도수 파이썬 시각화</li>
+                    <li>파이썬 코드 설계</li>
+                    <li>Flask 애플리케이션에 사용될 UI/UX 스타일 구축</li>
+                    <li>발표 자료 제작</li>
+                </ul>
+            </td>
+            <td width = 300>
+                <ul>
+                    <li>대상 고객/사용자의 특징, 목표, 문제를 구체화하여 프로젝트 방향성을 강화</li>
+                    <li>Flask 애플리케이션에 사용될 UI/UX 스타일 구축 </li>
+                    <li>프로젝트 진행 내용 및 결과를 효과적으로 전달</li>
+                    <li>발표 자료 제작</li>
+                </ul>
+            </td>
+            <td width = 300>
+                <ul>
+                    <li>2022 인구밀도와 교통사고 빈도수 파이썬 시각화</li>
+                    <li>Flask 애플리케이션에 사용될 UI/UX 스타일 구축</li>
+                    <li>발표 자료 제작</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <img src="{{url_for('static', filename='smrd.PNG')}}" alt="" width="800" height="200">
+    <img src="{{url_for('static', filename='smrd_2.PNG')}}" alt="" width="400" height="174">
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 1200px;
+        }
+        header {
+            background-color: rgb(255, 110, 178, 0.3);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: rgb(255, 110, 178 , 0.3);
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: rgb(255, 150, 150);
+        }
+
+        .content-item {
+            display: none;
+            margin: 20px 0;
+            justify-content: center; /* Flex 정렬로 중앙에 배치 */
+            align-items: center;
+            text-align: center;
+        }
+
+        .content-item.active {
+            display: flex; /* Flexbox를 사용하여 중앙 정렬 */
+            flex-direction: column;
+        }
+
+        .content-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 분석결과시각화를 통해 느낀 생각에 대해 작성 -->
+    <header>
+        <h2>4. 분석결과 시각화</h2>
+    </header>
+    <hr>
+    <div class="buttons-container">
+        <div class="button" data-target="item1">2021</div>
+        <div class="button" data-target="item2">2022</div>
+        <div class="button" data-target="item3">2023</div>
+    </div>
+
+    <hr>
+    <div id="item1" class="content-item active">
+        <img src="{{url_for('static', filename='2021행정구역별 사고 건수 및 인구수.PNG')}}" alt="2021">
+        <br><br><br>
+    </div>
+    <div id="item2" class="content-item">
+        <img src="{{url_for('static', filename='2022행정구역별 사고 건수 및 인구수.PNG')}}" alt="2022">
+        <br><br><br>
+    </div>
+    <div id="item3" class="content-item">
+        <img src="{{url_for('static', filename='2023행정구역별 사고 건수 및 인구수.PNG')}}" alt="2023">
+        <br><br><br>
+    </div>
+
+    <script>
+        // 모든 버튼에 이벤트 리스너 추가
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 콘텐츠 숨기기
+                document.querySelectorAll('.content-item').forEach(item => item.classList.remove('active'));
+
+                // 클릭한 버튼에 해당하는 콘텐츠 보이기
+                const targetId = button.getAttribute('data-target');
+                const targetItem = document.getElementById(targetId);
+                if (targetItem) {
+                    targetItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

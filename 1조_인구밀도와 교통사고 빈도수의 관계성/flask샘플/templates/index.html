@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffb1e880, #fffab280);
+        }
+
+        #title {
+            background-color: rgba(255, 29, 134, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #content {
+            width: 1820px;
+            height: 700px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        #content a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-item {
+            width: 500px;
+            text-align: center;
+        }
+
+        #resultFrame {
+            width: 100%;
+            height: 700px;
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        td.nav-item:hover {
+            background: linear-gradient(to right, #fffab2, #ffb1e8);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="title">
+            미니프로젝트 : 인구밀도와 교통사고 빈도수의 관계성
+        </h1>
+    </div>
+    <table border="1" id="content">
+        <tr>
+            <th class="nav-item"><a href="{{url_for('page', name='0')}}" target="resultFrame">0. 시작화면</a></td>
+            <td rowspan="9">
+                <!-- 첫 화면에 표시될 페이지 URL 설정 -->
+                <iframe id="resultFrame" frameborder="0" name="resultFrame" src="{{url_for('page', name='0')}}"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='1')}}" target="resultFrame">1. 인구 수와 교통사고 건수의 상관관계에 대한 데이터 자료</a></td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='2')}}" target="resultFrame">2.사용한 라이브러리 및 활용 데이터셋</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='3')}}" target="resultFrame">3.데이터 전처리 과정</a></td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='4')}}" target="resultFrame">4.분석결과시각화</a></td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='5')}}" target="resultFrame">5.코드 짤 때의 문제점</a></td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='6')}}" target="resultFrame">6.참고문헌</a></td>
+        </tr>
+        <tr>
+            <td class="nav-item"><a href="{{url_for('page', name='7')}}" target="resultFrame">7.팀원역할</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>

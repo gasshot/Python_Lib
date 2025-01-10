@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons</title>
+    <style>
+        /* body {
+            background-color: aliceblue;
+        } */
+
+        header {
+            background-color: rgb(255, 110, 178, 0.3);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: rgb(255, 110, 178 , 0.3);
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: rgb(255, 150, 150);
+        }
+
+        .content-item {
+            display: none;
+            /* 기본적으로 숨김 */
+            margin: 20px 0;
+        }
+
+        .content-item.active {
+            display: block;
+            /* 활성화된 콘텐츠는 표시 */
+        }
+
+        .content-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>5. 코드 짤 때의 문제점</h2>
+    </header>
+    <hr>
+    <div class="buttons-container">
+        <div class="button" data-target="item1">문제점.01</div>
+        <div class="button" data-target="item2">문제점.02</div>
+        <div class="button" data-target="item3">문제점.03</div>
+        <div class="button" data-target="item4">문제점.04</div>
+    </div>
+
+    <hr>
+    <div id="item1" class="content-item active">
+        <img src="{{url_for('static', filename='xlsx2csv.jpg')}}" alt="CSV 변환 과정 이미지">
+        <br><br><br>
+        <li>인구밀도에 해당하는 데이터는 CSV 파일이었지만, 교통사고 빈도수에 해당하는 데이터는 XLSX라 Python으로 파일을 변환하는 과정이 필요했다.</li>
+    </div>
+    <div id="item2" class="content-item">
+        <img src="{{url_for('static', filename='concat.JPG')}}" alt="데이터프레임 병합 과정 이미지">
+        <br><br><br>
+        <li>인구수 데이터에는 2023년부터 강원도특별자치도라는 새로운 컬럼이 생겨서 강원도의 인구 값이 0으로 나왔다. 내용을 통일하기 위해 변화한 인덱스 번호를 찾아 제거한 후, 두 DataFrame을
+            합치는 <code>concat</code>을 활용하였다.</li>
+    </div>
+    <div id="item3" class="content-item">
+        <img src="{{url_for('static', filename='drop_null_data.jpg')}}" alt="결측 데이터 제거 이미지">
+        <br><br><br>
+        <li>교통사고 빈도수와 인구수 데이터를 합치는 과정에서 인덱스 번호가 다를 경우, 비어있는 인덱스 번호가 None 값으로 출력되었다.</li>
+    </div>
+    <div id="item4" class="content-item">
+        <img src="{{url_for('static', filename='alt_str2int.jpg')}}" alt="문자열을 정수형으로 변환하는 작업 이미지">
+        <br><br><br>
+        <li>CSV 파일에서 인구수 값이 문자열 형태여서 정수형으로 변환하는 작업이 기존 방법으로는 알 수 없었다.</li>
+
+    </div>
+
+    <script>
+        // 모든 버튼에 이벤트 리스너 추가
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 콘텐츠 숨기기
+                document.querySelectorAll('.content-item').forEach(item => item.classList.remove('active'));
+
+                // 클릭한 버튼에 해당하는 콘텐츠 보이기
+                const targetId = button.getAttribute('data-target');
+                const targetItem = document.getElementById(targetId);
+                if (targetItem) {
+                    targetItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

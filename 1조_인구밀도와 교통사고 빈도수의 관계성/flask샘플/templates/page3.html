@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: rgb(255, 110, 178, 0.3);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #hl { color: red;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>3. 데이터 전처리 과정</h2>
+    </header>
+    <hr>
+
+    <ol type="1">
+        <li>데이터 수집</li>
+        <li>
+            <strong style="color: blue;">데이터 결측치 확인</strong>
+        </li>
+        <li>
+            <strong style="color: blue;">결측치 수정 및 데이터 전처리</strong>
+        </li>
+    </ol>
+
+<table>
+<td>
+    <img src="{{url_for('static', filename='COLUMN.PNG')}}" width="300">
+
+</td>
+<td>
+    <h4>강원도 » 강원특별광역시 변경에 따른 결측치 확인
+        <h4><span>결측치 >> <b id="hl">"강원도"</b>
+        </h4>
+        
+        <h4>삭제 및 Pandas 라이브러리의 concat 함수를 활용</h4>
+        <h4>인구 데이터 & 사고 데이터 결합</h4>
+        
+        </span></h4>
+
+</td>
+
+
+
+
+</table>
+
+
+
+    
+
+</body>
+
+</html>

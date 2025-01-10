@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: rgb(194, 194, 194);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        데이터 전처리 과정에 대해 상세히 작성
+        : 데이터 확인 - 결측값확인 - 데이터 가공 순
+        ex) 1.활용할 데이터에 대한 파악(유의미/무의미한 데이터, 분석에 활용한 데이터컬럼 구분 등 작성 => 텍스트 + 이미지)
+            2.결측값 혹은 이상치가 있을 경우 어떻게 해결하였는지 작성(텍스트 + 이미지)
+            3.전처리로 가공된 데이터 
+    -->
+    <div id="header">
+        <h2>3. 데이터 전처리 과정</h2>
+    </div>
+    <hr>
+
+    <ol type="1">
+        <li>데이터 수집</li>
+        <li>
+            <strong style="color: blue;">데이터 결측치 확인</strong>
+        </li>
+        <li>
+            <strong style="color: blue;">결측치 수정 및 데이터 전처리</strong>
+        </li>
+    </ol>
+    <img src="{{url_for('static', filename='COLUMN.PNG')}}" width="300">
+    <br>
+    <br>
+    <strong class="qq">강원도 » 강원특별광역시 변경에 따른 결측치 확인</strong><br>
+    <span>불필요 한 행
+        <b>강원도</b> 삭제 및 Pandas 라이브러리의 concat 함수를 활용 하여 인구 데이터와 사고 데이터 결합
+    </span>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: rgb(194, 194, 194);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #인구{
+            width: 400px;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+        #사고{
+            width: 200px;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <h2>인구 수와 교통사고 건수의 상관관계에 대한 데이터 자료</h3>
+    </div>
+    <hr>
+    <ul>
+        <h3>목표 및 문제 정의</h3>
+        <li>인구 수 대비 교통사고 건수를 비교하여 교통사고 현황을 파악하여 시,도 별로 더 나은 교통 환경을 만들기 위함.</li>
+    </ul>
+    <hr>
+    <ul>
+        <h3>분석 범위</h3>
+        <li>21년~23년 인구수 21년~23년 교통사고 건수</li>
+        <li>근 시일 내에 사용되어야 할 정보이기 때문에 21년 이전의 데이터는 효용성이 없다고 판단하여 데이터화 진행하지 않았음.</li>
+        <li>인구 별 교통사고 건 수의 현황을 시 도 별로 가져옴으로서 각 지자체와 업체들이 선택하여 집중할 수 있도록 분류함</li>
+    <img id="인구" src="{{url_for('static', filename='map.PNG')}}">
+    <ul>
+        <h3>사용 방안</h3>
+        <li>특정 지역의 사고 빈도에 따른 교통사고 위험도 평가</li>
+        <li>위험을 최소화 하기 위한 지역별 안전 조치 강화</li>
+        <li>지자체 별 사고 현황에 대한 정책 설계와 실행으로, 다각화된 방안 제시 가능</li>
+        <li>학술 연구에 사고율 데이터를 사용하여 지역별 특성 분석 가능</li>
+        <li>이하 기술</li>
+    </ul>
+
+
+</body>
+
+</html>

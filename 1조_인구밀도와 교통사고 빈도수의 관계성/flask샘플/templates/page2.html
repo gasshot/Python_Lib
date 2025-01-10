@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: rgb(255, 110, 178, 0.3);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .lib > td{
+            background-color :rgb(255, 110, 178, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>2. 사용한 라이브러리 및 활용 데이터셋</h2>
+    </header>
+    <hr>
+
+    <ol>
+        <li style="font-size: 40px"><b>pandas</b></li>                       
+        <li style="font-size: 40px"><b>matplotlib</b></li>                       
+    </ol>
+
+    <hr>
+    <h3>활용 데이터셋</h3>
+    <ol>
+        <!-- 분석에 활용한 데이터 컬럼 및 데이터 총 갯수 작성 -->
+        <li>지역별 교통사고 사고 건수</li>
+        <li>지역별 인구통계</li>
+        <li>사고 건수 컬럼구성
+            <img src="{{url_for('static', filename='Report column.PNG')}}" alt="데이터컬럼" />
+        </li>
+        <li>인구수 컬럼구성
+
+        </li>
+        <img src="{{url_for('static', filename='2023 인구수..jpg')}}" alt="데이터컬럼" />
+    </ol>
+</body>
+</html>
